@@ -1,7 +1,7 @@
 
 const handleRegister = (db, bcrypt) => (req, res) => {
     const { email, name, password } = req.body;
-    if (!emaill || !name || !password) {
+    if (!email || !name || !password) {
         return res.status(400).json('Incorrect form submission');
     }
     const saltRounds = 10;
